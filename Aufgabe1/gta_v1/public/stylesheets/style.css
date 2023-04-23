@@ -1,6 +1,5 @@
 /*
   File origin: VS1LAB A1b  
-
   CSS style is BEM. Classes used for CSS, IDs for JavaScript querying (future use).
   CSS variables used for clarity and themability (e.g. through SSR). 
   Inherited box sizing used for ease of including 3rd party content-box components.
@@ -45,9 +44,15 @@ a {
 }
 
 /* ### TODO ### Styles for other HTML elements */
+input {
+  margin: 1rem 0rem 1rem 0rem;
+  padding-left: 1rem;
+  height: 2rem;
+}
 
-/* ... your code here ... */
-
+button {
+  height: 2rem;
+}
 
 /* Grid styles (no changes required) */
 
@@ -109,25 +114,55 @@ a {
 
 /* ### TODO ### Styles for Header Component */
 
-/* ... your code here ... */
-
+header {
+  background-color: var(--background-color);
+  align-items: center;
+  padding: 2rem;
+}
 
 /* ### TODO ### Styles for Main Component */
 
-/* ... your code here ... */
-
+main {
+  padding: 3rem;
+  margin: auto;
+}
 
 /* ### TODO ### Styles for Tagging component */
 
-/* ... your code here ... */
-
+.main__tagging {
+  display: flex;
+  flex-direction: column;
+}
 
 /* ### TODO ### Styles for Discovery component */
 
-/* ... your code here ... */
+.discovery__search {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
 
+.discovery__results li {
+  color: var(--link-color);
+  border: solid 2px var(--border-color);
+  background-color: var(--background-color);
+  list-style-type: none;
+  padding: 1rem 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#mapView {
+  max-width: 100%;
+}
 
 /* ### TODO ### Styles for Footer Component */
+
+footer {
+  background-color: var(--background-color);
+  align-items: center;
+  padding: 2rem;
+}
 
 /* ... your code here ... */
 
