@@ -103,16 +103,14 @@ class MapManager {
  * It is called once the page has been fully loaded.
  */
 // ... your code here ...
-let la = document.getElementById("latitude");
-let lo = document.getElementById("longitude");
 
 
 
 
 function updateLocation(help) {
     console.log(help);
-    la.setAttribute("value", help.latitude);
-    lo.setAttribute("value", help.longitude);
+    document.getElementById("latitude").setAttribute("value", help.latitude);
+    document.getElementById("longitude").setAttribute("value", help.longitude);
     document.getElementById("mapView").setAttribute("src", new MapManager("rM6ddjDPwLV4UfXhwL7O8FM6b4iiCfHl").getMapUrl(help.latitude, help.longitude, [], 15));
 }
 
