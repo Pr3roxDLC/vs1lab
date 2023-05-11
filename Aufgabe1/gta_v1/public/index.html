@@ -65,39 +65,40 @@
 
             <!-- ############### VS1Lab 1a Form 2 Start -->
             <form id="discoveryFilterForm" action="/discovery" method="post">
+                <form id="discoveryFilterForm" action="/discovery" method="post">
 
-                <fieldset class="fieldset discovery__fieldset">
-                    <legend>
-                        Search
-                    </legend>
-                    <label for="searchterm">
-                        Search term or keywords:
-                    </label>
-                    <input type="text" name="Searchterm" id="searchterm" placeholder="e.g. Berlin" required>
-                    <input type="hidden" name="Longitude" id="longitudediscovery">
-                    <input type="hidden" name="Latitude" id="latitudediscovery">
-                    <button type="submit">
-                        Search
-                    </button>
-                </fieldset>
+                    <fieldset class="fieldset discovery__fieldset">
+                        <legend>
+                            Search
+                        </legend>
+                        <label for="searchterm">
+                            Search term or keywords:
+                        </label>
+                        <input type="text" name="Searchterm" id="searchterm" placeholder="e.g. Berlin" required>
+                        <input type="hidden" name="Longitude" id="longitudediscovery">
+                        <input type="hidden" name="Latitude" id="latitudediscovery">
+                        <button type="submit">
+                            Search
+                        </button>
+                    </fieldset>
 
-            </form>
-            <!-- ############### VS1Lab 1a Form 2 End -->
+                </form>
+                <!-- ############### VS1Lab 1a Form 2 End -->
 
-            <div class="discovery__wrapper row">
-                <div class="discovery__taglist col-6">
-                    <ul class="discovery__results" id="discoveryResults">
-                        <li>Castle (49.01379, 8.404435) <br> #sight</li>
-                        <li>IWI (49.01379, 8.390071) <br> #edu</li>
-                    </ul>
+                <div class="discovery__wrapper row">
+                    <div class="discovery__taglist col-6">
+                        <ul class="discovery__results" id="discoveryResults">
+                            <li>Castle (49.01379, 8.404435) <br> #sight</li>
+                            <li>IWI (49.01379, 8.390071) <br> #edu</li>
+                        </ul>
+                    </div>
+
+                    <div class="discovery__map col-6">
+                        <img src="./images/mapview.jpg" alt="a map with locations" id="mapView" />
+                        <br>
+                        <span>Result map</span>
+                    </div>
                 </div>
-
-                <div class="discovery__map col-6">
-                    <img src="./images/mapview.jpg" alt="a map with locations" id="mapView" />
-                    <br>
-                    <span>Result map</span>
-                </div>
-            </div>
         </section>
 
     </main>
