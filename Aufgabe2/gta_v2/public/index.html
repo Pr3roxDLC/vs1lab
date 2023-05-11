@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeoTagApp</title>
-    <link rel="stylesheet" href="./stylesheets/style.css" />
-    <link rel="icon" type="image/x-icon" href="/Aufgabe1/gta_v1/public/favicon.icodxcxc">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -35,13 +35,13 @@
                     <label for="latitude">
                         Latitude:
                     </label>
-                    <input type="number" step="any" name="Latitude" id="latitude" placeholder="49.01379" readonly
-                        disabled>
+                    <input type="number" step="any" name="Latitude" id="latitude" placeholder="49.01379" value=""
+                        readonly disabled>
                     <label for="longitude">
                         Longitude:
                     </label>
-                    <input type="number" step="any" name="Longitude" id="longitude" placeholder="8.390071" readonly
-                        disabled>
+                    <input type="number" step="any" name="Longitude" id="longitude" placeholder="8.390071" value=""
+                        readonly disabled>
                     <label for="name">
                         Name:
                     </label>
@@ -74,8 +74,8 @@
                         Search term or keywords:
                     </label>
                     <input type="text" name="Searchterm" id="searchterm" placeholder="e.g. Berlin" required>
-                    <input type="hidden" name="Longitude" id="longitudediscovery">
-                    <input type="hidden" name="Latitude" id="latitudediscovery">
+                    <input type="hidden" name="Longitude" id="longitudediscovery" value="">
+                    <input type="hidden" name="Latitude" id="latitudediscovery" value="">
                     <button type="submit">
                         Search
                     </button>
@@ -105,6 +105,11 @@
     <footer class="footer">
         <span>(c) 2021/22 HKA_IWI_VSYS</span>
     </footer>
+
+    <!-- Load JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./javascripts/geotagging.js"></script>
 
 
 
