@@ -113,7 +113,7 @@ function updateLocation(help) {
     document.getElementById("longitude").setAttribute("value", help.longitude);
     document.getElementById("latitudediscovery").setAttribute("value", help.latitude);
     document.getElementById("longitudediscovery").setAttribute("value", help.longitude);
-    document.getElementById("mapView").setAttribute("src", new MapManager("rM6ddjDPwLV4UfXhwL7O8FM6b4iiCfHl").getMapUrl(help.latitude, help.longitude, [], 15));
+    document.getElementById("mapView").setAttribute("src", new MapManager("rM6ddjDPwLV4UfXhwL7O8FM6b4iiCfHl").getMapUrl(help.latitude, help.longitude, [], 13));
 }
 
 

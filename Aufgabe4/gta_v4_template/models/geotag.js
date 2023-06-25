@@ -11,6 +11,7 @@
  */
 class GeoTag {
 
+    id = "";
     latitude;
     longitude;
     name = "";

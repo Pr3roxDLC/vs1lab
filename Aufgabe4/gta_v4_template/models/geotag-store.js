@@ -28,12 +28,11 @@ const GeoTagExamples = require("./geotag-examples");
 class InMemoryGeoTagStore{
 
   static #geoTags = GeoTagExamples.tagList.map((tag)=>{
-    return{"name":tag[0], "latitude":tag[1], "longitude":tag[2], "hashtag":tag[3]}
+    return{"name":tag[0], "latitude":tag[1], "longitude":tag[2], "hashtag":tag[3], "id":tag[4]}
     });
 
   static addGeoTag(geoTag) {
     this.#geoTags.push(geoTag);      
-    console.log(this.#geoTags);
 }
 
   static removeGeoTag(name){
@@ -41,6 +40,8 @@ class InMemoryGeoTagStore{
   }
 
   static getNearbyGeoTags(longitude, latitude){
+    console.log(this.#geoTags);
+    console.log(this.#geoTags.filter((geoTag)=>this.#isInProximity(geoTag, latitude, longitude)));
     return this.#geoTags.filter((geoTag)=>this.#isInProximity(geoTag, latitude, longitude));
   }
 
@@ -53,6 +54,9 @@ class InMemoryGeoTagStore{
     console.log(this.getNearbyGeoTags(longitude, latitude).filter((geoTag)=>this.#testKeyword(geoTag, keyword)));
     return this.getNearbyGeoTags(longitude, latitude).filter((geoTag)=>this.#testKeyword(geoTag, keyword));
 }
+static removeGeoTagById(id){
+  this.#geoTags.splice(this.#geoTags.findIndex((geoTag)=>geoTag.id===id),1)
+}
   
   static #testKeyword(geoTag, keyword){
     if (geoTag.name.includes(keyword)){
@@ -61,6 +65,9 @@ class InMemoryGeoTagStore{
         return true;
     }
     return false;
+  }
+  static getTagById(id){
+    return this.#geoTags.filter((geoTag)=>geoTag.id===id)[0];
   }
 }
 
